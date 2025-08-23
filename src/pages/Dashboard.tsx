@@ -126,7 +126,7 @@ export default function Dashboard() {
       >
         <div className="flex items-center justify-between">
           <div>
-            <h1 className="text-3xl font-bold">
+            <h1 className="text-3xl font-bold font-poppins bg-gradient-to-r from-primary via-primary-glow to-accent bg-clip-text text-transparent">
               Welcome back, {user?.name.split(' ')[0]}
             </h1>
             <p className="text-muted-foreground mt-2">

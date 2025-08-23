@@ -161,10 +161,10 @@ export default function Dashboard() {
                 <CardContent className="p-6 flex-1 flex flex-col justify-between">
                   <div className="flex items-center justify-between">
                     <div className="flex-1">
-                      <p className="text-base font-medium" style={{ color: '#FF7043' }}>
+                      <p className="text-sm font-medium text-foreground">
                         {card.title}
                       </p>
-                      <div className="text-4xl font-bold mt-2" style={{ color: '#FF7043' }}>
+                      <div className="text-2xl font-bold mt-2 text-foreground">
                         {typeof value === 'number' 
                           ? value.toLocaleString() + (card.suffix || '')
                           : String(value) + (card.suffix || '')
@@ -191,11 +191,11 @@ export default function Dashboard() {
         >
           <Card className="shadow-card">
             <CardHeader>
-              <CardTitle className="flex items-center gap-2" style={{ color: '#FF7043' }}>
+              <CardTitle className="flex items-center gap-2 text-foreground">
                 <TrendingUp className="w-5 h-5" />
                 Detection Rate Progress
               </CardTitle>
-              <CardDescription style={{ color: '#FF7043' }}>
+              <CardDescription className="text-muted-foreground">
                 Current system detection accuracy: {stats.detectionRate}%
               </CardDescription>
             </CardHeader>
@@ -205,11 +205,11 @@ export default function Dashboard() {
                 className="h-4"
               />
               <div className="flex justify-between mt-2">
-                <span className="text-sm" style={{ color: '#FF7043' }}>0%</span>
-                <span className="text-sm font-medium" style={{ color: '#FF7043' }}>
+                <span className="text-sm text-muted-foreground">0%</span>
+                <span className="text-sm font-medium text-foreground">
                   {stats.detectionRate}%
                 </span>
-                <span className="text-sm" style={{ color: '#FF7043' }}>100%</span>
+                <span className="text-sm text-muted-foreground">100%</span>
               </div>
             </CardContent>
           </Card>

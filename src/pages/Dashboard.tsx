@@ -155,15 +155,16 @@ export default function Dashboard() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
+              className="h-full"
             >
-              <Card className="shadow-card hover:shadow-primary transition-all duration-300">
-                <CardContent className="p-6">
+              <Card className="shadow-card hover:shadow-primary transition-all duration-300 h-full flex flex-col">
+                <CardContent className="p-6 flex-1 flex flex-col justify-between">
                   <div className="flex items-center justify-between">
-                    <div>
-                      <p className="text-sm font-medium text-muted-foreground">
+                    <div className="flex-1">
+                      <p className="text-base font-medium" style={{ color: '#FF7043' }}>
                         {card.title}
                       </p>
-                      <div className="text-2xl font-bold mt-2">
+                      <div className="text-4xl font-bold mt-2" style={{ color: '#FF7043' }}>
                         {typeof value === 'number' 
                           ? value.toLocaleString() + (card.suffix || '')
                           : String(value) + (card.suffix || '')
@@ -174,18 +175,46 @@ export default function Dashboard() {
                       <card.icon className={`w-6 h-6 ${card.color}`} />
                     </div>
                   </div>
-                  {card.key === 'detectionRate' && (
-                    <Progress 
-                      value={typeof value === 'number' ? value : 0} 
-                      className="mt-4"
-                    />
-                  )}
                 </CardContent>
               </Card>
             </motion.div>
           );
         })}
       </div>
+
+      {/* Detection Rate Graph */}
+      {stats && (
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.5 }}
+        >
+          <Card className="shadow-card">
+            <CardHeader>
+              <CardTitle className="flex items-center gap-2" style={{ color: '#FF7043' }}>
+                <TrendingUp className="w-5 h-5" />
+                Detection Rate Progress
+              </CardTitle>
+              <CardDescription style={{ color: '#FF7043' }}>
+                Current system detection accuracy: {stats.detectionRate}%
+              </CardDescription>
+            </CardHeader>
+            <CardContent className="p-6">
+              <Progress 
+                value={typeof stats.detectionRate === 'number' ? stats.detectionRate : 0} 
+                className="h-4"
+              />
+              <div className="flex justify-between mt-2">
+                <span className="text-sm" style={{ color: '#FF7043' }}>0%</span>
+                <span className="text-sm font-medium" style={{ color: '#FF7043' }}>
+                  {stats.detectionRate}%
+                </span>
+                <span className="text-sm" style={{ color: '#FF7043' }}>100%</span>
+              </div>
+            </CardContent>
+          </Card>
+        </motion.div>
+      )}
 
       {/* Recent Activity */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">

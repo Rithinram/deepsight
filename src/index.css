@@ -8,26 +8,26 @@ All colors MUST be HSL for consistent theming.
 
 @layer base {
   :root {
-    /* Light Mode - Burnt Orange & Deep Teal Theme */
-    --background: 14 100% 95%; /* Light burnt orange background */
+    /* Light Mode - Silver & Deep Teal Theme */
+    --background: 0 0% 96%; /* Light silver background */
     --foreground: 220 13% 18%;
 
-    --card: 14 100% 95%; /* Light burnt orange cards */
+    --card: 0 0% 96%; /* Light silver cards */
     --card-foreground: 220 13% 18%;
 
-    --popover: 14 100% 95%; /* Light burnt orange popover */
+    --popover: 0 0% 96%; /* Light silver popover */
     --popover-foreground: 220 13% 18%;
 
     /* DeepSight Deep Teal Branding */
     --primary: 180 100% 25%; /* #008080 Deep Teal */
-    --primary-foreground: 14 100% 63%; /* Burnt orange text on teal */
+    --primary-foreground: 0 0% 75%; /* Silver text on teal */
     --primary-glow: 180 100% 35%;
     --primary-muted: 180 30% 85%;
 
-    --secondary: 14 80% 90%; /* Light burnt orange secondary */
+    --secondary: 0 0% 88%; /* Light silver secondary */
     --secondary-foreground: 220 13% 18%;
 
-    --muted: 14 80% 90%; /* Light burnt orange muted */
+    --muted: 0 0% 88%; /* Light silver muted */
     --muted-foreground: 220 9% 46%;
 
     --accent: 180 30% 85%; /* Light teal accent */
@@ -35,32 +35,32 @@ All colors MUST be HSL for consistent theming.
 
     /* Status Colors */
     --success: 142 76% 36%;
-    --success-foreground: 14 100% 63%; /* Burnt orange text */
+    --success-foreground: 0 0% 75%; /* Silver text */
     --warning: 38 92% 50%;
-    --warning-foreground: 14 100% 63%; /* Burnt orange text */
+    --warning-foreground: 0 0% 75%; /* Silver text */
     --destructive: 0 84% 60%;
-    --destructive-foreground: 14 100% 63%; /* Burnt orange text */
+    --destructive-foreground: 0 0% 75%; /* Silver text */
 
-    --border: 14 60% 85%; /* Light burnt orange border */
-    --input: 14 60% 85%; /* Light burnt orange input */
+    --border: 0 0% 82%; /* Light silver border */
+    --input: 0 0% 82%; /* Light silver input */
     --ring: 180 100% 25%; /* Deep teal ring */
 
     --radius: 0.75rem;
 
     /* Sidebar Styling */
-    --sidebar-background: 14 90% 92%; /* Light burnt orange sidebar */
+    --sidebar-background: 0 0% 90%; /* Light silver sidebar */
     --sidebar-foreground: 220 13% 18%;
     --sidebar-primary: 180 100% 25%; /* Deep teal sidebar primary */
-    --sidebar-primary-foreground: 14 100% 63%; /* Burnt orange text */
+    --sidebar-primary-foreground: 0 0% 75%; /* Silver text */
     --sidebar-accent: 180 30% 85%; /* Light teal accent */
     --sidebar-accent-foreground: 180 100% 25%; /* Deep teal text */
-    --sidebar-border: 14 60% 80%; /* Burnt orange border */
+    --sidebar-border: 0 0% 78%; /* Silver border */
     --sidebar-ring: 180 100% 25%; /* Deep teal ring */
 
     /* Custom Gradients */
     --gradient-primary: linear-gradient(135deg, hsl(180, 100%, 25%) 0%, hsl(180, 100%, 35%) 100%);
-    --gradient-card: linear-gradient(145deg, hsl(14, 100%, 95%) 0%, hsl(14, 80%, 90%) 100%);
-    --gradient-glass: linear-gradient(145deg, hsl(14, 100%, 95%, 0.8) 0%, hsl(14, 80%, 90%, 0.6) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(0, 0%, 96%) 0%, hsl(0, 0%, 88%) 100%);
+    --gradient-glass: linear-gradient(145deg, hsl(0, 0%, 96%, 0.8) 0%, hsl(0, 0%, 88%, 0.6) 100%);
     
     /* Shadows */
     --shadow-primary: 0 10px 30px -5px hsl(180, 100%, 25%, 0.3);
@@ -73,15 +73,15 @@ All colors MUST be HSL for consistent theming.
   }
 
   .dark {
-    /* Dark Mode - Black with Deep Teal & Burnt Orange Accents */
+    /* Dark Mode - Black with Deep Teal & Silver Accents */
     --background: 0 0% 0%; /* #000000 */
-    --foreground: 14 100% 63%; /* Burnt orange text on black */
+    --foreground: 0 0% 75%; /* Silver text on black */
 
     --card: 0 0% 5%;
-    --card-foreground: 14 100% 63%; /* Burnt orange text */
+    --card-foreground: 0 0% 75%; /* Silver text */
 
     --popover: 0 0% 5%;
-    --popover-foreground: 14 100% 63%; /* Burnt orange text */
+    --popover-foreground: 0 0% 75%; /* Silver text */
 
     /* DeepSight Deep Teal Branding - Dark Mode */
     --primary: 180 100% 35%; /* Brighter teal for dark bg */
@@ -90,10 +90,10 @@ All colors MUST be HSL for consistent theming.
     --primary-muted: 180 30% 25%;
 
     --secondary: 0 0% 10%;
-    --secondary-foreground: 14 100% 63%; /* Burnt orange text */
+    --secondary-foreground: 0 0% 75%; /* Silver text */
 
     --muted: 0 0% 10%;
-    --muted-foreground: 14 70% 70%; /* Lighter burnt orange */
+    --muted-foreground: 0 0% 70%; /* Lighter silver */
 
     --accent: 180 30% 15%; /* Dark teal accent */
     --accent-foreground: 180 100% 35%; /* Brighter teal text */
@@ -104,7 +104,7 @@ All colors MUST be HSL for consistent theming.
     --warning: 38 92% 55%;
     --warning-foreground: 0 0% 0%;
     --destructive: 0 84% 65%;
-    --destructive-foreground: 14 100% 63%; /* Burnt orange text */
+    --destructive-foreground: 0 0% 75%; /* Silver text */
 
     --border: 0 0% 15%;
     --input: 0 0% 15%;
@@ -112,11 +112,11 @@ All colors MUST be HSL for consistent theming.
 
     /* Sidebar - Dark Mode */
     --sidebar-background: 0 0% 3%;
-    --sidebar-foreground: 14 100% 63%; /* Burnt orange text */
+    --sidebar-foreground: 0 0% 75%; /* Silver text */
     --sidebar-primary: 180 100% 35%; /* Bright teal primary */
     --sidebar-primary-foreground: 0 0% 0%; /* Black text on teal */
     --sidebar-accent: 0 0% 10%;
-    --sidebar-accent-foreground: 14 100% 63%; /* Burnt orange text */
+    --sidebar-accent-foreground: 0 0% 75%; /* Silver text */
     --sidebar-border: 0 0% 15%;
     --sidebar-ring: 180 100% 35%; /* Bright teal ring */
 

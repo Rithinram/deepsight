@@ -12,6 +12,9 @@ import Upload from "./pages/Upload";
 import Alerts from "./pages/Alerts";
 import Results from "./pages/Results";
 import Settings from "./pages/Settings";
+import AuthorizedAds from "./pages/AuthorizedAds";
+import UserManagement from "./pages/UserManagement";
+import SystemLogs from "./pages/SystemLogs";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -57,6 +60,27 @@ const App = () => (
                 <ProtectedRoute>
                   <DashboardLayout>
                     <Settings />
+                  </DashboardLayout>
+                </ProtectedRoute>
+              } />
+              <Route path="/authorized-ads" element={
+                <ProtectedRoute>
+                  <DashboardLayout>
+                    <AuthorizedAds />
+                  </DashboardLayout>
+                </ProtectedRoute>
+              } />
+              <Route path="/users" element={
+                <ProtectedRoute>
+                  <DashboardLayout>
+                    <UserManagement />
+                  </DashboardLayout>
+                </ProtectedRoute>
+              } />
+              <Route path="/logs" element={
+                <ProtectedRoute>
+                  <DashboardLayout>
+                    <SystemLogs />
                   </DashboardLayout>
                 </ProtectedRoute>
               } />

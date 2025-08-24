@@ -253,7 +253,7 @@ export default function SystemLogs() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
           >
-            <Card className="shadow-card hover:shadow-primary transition-all duration-300">
+            <Card className="shadow-card hover:shadow-primary transition-all duration-300 h-32">
               <CardContent className="p-6">
                 <div className="flex items-center justify-between">
                   <div>

@@ -30,8 +30,8 @@ export function DashboardHeader() {
       <div className="flex items-center gap-4">
         <SidebarTrigger className="lg:hidden" />
         <div className="flex items-center gap-3">
-          <div className="w-8 h-8 rounded-lg bg-gradient-primary flex items-center justify-center">
-            <span className="text-primary-foreground font-bold text-sm">DS</span>
+          <div className="w-8 h-8 rounded-lg flex items-center justify-center">
+            <img src="/lovable-uploads/dcaf1067-67d0-450d-ac9a-5f87d2b83b3a.png" alt="DeepSight Logo" className="w-full h-full object-contain" />
           </div>
           <div>
             <h1 className="text-xl font-bold bg-gradient-primary bg-clip-text text-transparent">

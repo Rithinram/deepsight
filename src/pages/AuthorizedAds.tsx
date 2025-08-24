@@ -239,7 +239,7 @@ export default function AuthorizedAds() {
               Complete list of approved advertisement content with status and details.
             </CardDescription>
           </CardHeader>
-          <CardContent>
+          <CardContent className="p-0">
             <div className="overflow-x-auto">
               <Table>
                 <TableHeader>

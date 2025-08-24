@@ -340,7 +340,7 @@ export default function SystemLogs() {
               Real-time system logs with detailed information and filtering options.
             </CardDescription>
           </CardHeader>
-          <CardContent>
+          <CardContent className="p-0">
             <div className="overflow-x-auto">
               <Table>
                 <TableHeader>

@@ -263,7 +263,7 @@ export default function UserManagement() {
               Manage user accounts, roles, and system access.
             </CardDescription>
           </CardHeader>
-          <CardContent>
+          <CardContent className="p-0">
             <div className="overflow-x-auto">
               <Table>
                 <TableHeader>

@@ -1,4 +1,6 @@
+import { useState, useEffect } from 'react';
 import { Bell, Settings, LogOut, User } from 'lucide-react';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import {
@@ -17,6 +19,20 @@ import { motion } from 'framer-motion';
 
 export function DashboardHeader() {
   const { user, logout } = useAuth();
+  const navigate = useNavigate();
+  const location = useLocation();
+  const [hasUnreadAlerts, setHasUnreadAlerts] = useState(true);
+  
+  // Clear notifications when visiting alerts page
+  useEffect(() => {
+    if (location.pathname === '/alerts') {
+      setHasUnreadAlerts(false);
+    }
+  }, [location.pathname]);
+
+  const handleNotificationClick = () => {
+    navigate('/alerts');
+  };
   
   if (!user) return null;
 
@@ -44,14 +60,21 @@ export function DashboardHeader() {
 
       <div className="flex items-center gap-4">
         {/* Notifications */}
-        <Button variant="ghost" size="sm" className="relative">
+        <Button 
+          variant="ghost" 
+          size="sm" 
+          className="relative" 
+          onClick={handleNotificationClick}
+        >
           <Bell className="h-5 w-5" />
-          <Badge 
-            variant="destructive" 
-            className="absolute -top-1 -right-1 h-5 w-5 rounded-full text-xs p-0 flex items-center justify-center"
-          >
-            3
-          </Badge>
+          {hasUnreadAlerts && (
+            <Badge 
+              variant="destructive" 
+              className="absolute -top-1 -right-1 h-5 w-5 rounded-full text-xs p-0 flex items-center justify-center"
+            >
+              3
+            </Badge>
+          )}
         </Button>
 
         <ThemeToggle />

@@ -178,7 +178,7 @@ export function AppSidebar() {
               <p className="text-xs text-muted-foreground mb-1">Signed in as</p>
               <Badge 
                 variant={user.role === 'admin' ? 'default' : 'secondary'}
-                className="capitalize"
+                className="capitalize bg-teal-700 text-white"
               >
                 {user.role}
               </Badge>

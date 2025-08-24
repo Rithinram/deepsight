@@ -49,9 +49,7 @@ export function LoginPage() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
-          <div className="w-16 h-16 mx-auto mb-4 rounded-2xl bg-gradient-primary flex items-center justify-center shadow-primary p-2">
-            <img src="/lovable-uploads/09649cf5-265f-4b06-bb09-caeecb1cdc43.png" alt="DeepSight Logo" className="w-full h-full object-contain" />
-          </div>
+          <img src="/lovable-uploads/856eb5cc-c16e-42de-938b-d248c3f21890.png" alt="DeepSight Logo" className="w-16 h-16 mx-auto mb-4 object-contain" />
           <h1 className="text-3xl font-bold bg-gradient-primary bg-clip-text text-transparent">
             DeepSight
           </h1>
